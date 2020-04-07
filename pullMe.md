@@ -22,6 +22,8 @@ $ git pull origin master
 
 [Start with Jekyll](https://kissjgabi.github.io/kiss)  
 
+[Download jekyllFirst.zip](https://kissjgabi.github.io/jekyllFirst.zip)
+
 ## 3. Commit
 
 $ git add --all  
