@@ -1,4 +1,4 @@
-@import "minima";
+
 
 h1 {
     font-variant: small-caps;
@@ -28,3 +28,9 @@ mark::before, mark::after {
 del {
     background-color: lightgray;
 }
+
+.current {
+  color: red !important;
+}
+
+
