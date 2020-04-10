@@ -1,0 +1,30 @@
+@import "minima";
+
+h1 {
+    font-variant: small-caps;
+}
+
+h1>span {
+    color: red;
+    font-size: 0.75em;
+    font-weight: bold;
+    font-variant: normal;
+    font-style: italic;
+}
+
+h1 sup {
+    font-size: 0.5em;
+}
+
+p { text-align: justify;}
+mark {
+    font-weight: bold; color: navy;
+}
+
+mark::before, mark::after {
+    content: " ";
+}
+
+del {
+    background-color: lightgray;
+}
