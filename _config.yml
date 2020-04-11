@@ -30,12 +30,19 @@ twitter_username: "kissjgabi"
 github_username:  "kissjgabi"
 
 # Build settings
-theme: minima
+# theme: minima
 
-# plugins:
+#plugins:
 #  - jekyll-feed
 #  - jekyll-sitemap
 #  - jekyll-seo-tag
+
+plugins: 
+    - jekyll-paginate
+    - jekyll-archives
+
+paginate: 5
+paginate_path: /blog/page:num/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -56,6 +63,7 @@ theme: minima
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 
 collections:
   authors:
