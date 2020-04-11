@@ -61,6 +61,12 @@ collections:
   authors:
     output: true
 
+  categories:
+    output: true
+
+  tags:
+    output: true
+
 defaults:
   - scope:
       path: ""

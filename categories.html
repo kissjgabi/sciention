@@ -1,0 +1,19 @@
+---
+layout: mydefault
+title: Categories
+---
+<h1>Categories</h1>
+
+<ul>
+  {% for category in site.categories %}
+    <li>
+      <h2>
+        <a href="{{ category.url | relative_url}}">
+            {{ category.title }}
+        </a>
+      </h2>
+      <h3>{{ category.position }}</h3>
+      <p>{{ category.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+
