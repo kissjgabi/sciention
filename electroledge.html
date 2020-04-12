@@ -1,0 +1,19 @@
+---
+layout: mydefault
+title: Electronics Lessons
+---
+<h1>Electronics Lessons</h1>
+
+<ul>
+  {% for electroledge in site.electroledges %}
+    <li>
+      <h2>
+        <a href="{{ electroledge.url | relative_url}}">
+            {{ electroledge.title }}
+        </a>
+      </h2>
+      <h3>{{ electroledge.position }}</h3>
+      <p>{{ electroledge.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+

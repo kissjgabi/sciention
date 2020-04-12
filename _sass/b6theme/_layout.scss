@@ -2,13 +2,24 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $brand-color-dark;
+  border-top: 3px ridge $brand-color-dark;
   border-bottom: 1px solid $brand-color-light;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
 
   // Positioning context for the mobile navigation icon
   position: relative;
+}
+
+.b8t-breadcrumb {
+    margin: 0 auto;
+    padding: 10px 30px;
+    width: 100%;
+    max-width: calc(1024px - (30px * 2));
+    border-bottom: 1px solid $brand-color-light;   
+    font-variant: small-caps;
+    letter-spacing: -1px;
+    font-size: $spacing-unit * 0.865;
 }
 
 .site-title {
@@ -30,7 +41,7 @@
 
 .site-nav {
   position: absolute;
-  top: 9px;
+  top: ($spacing-unit * 1.865 - 26px)/2;
   right: $spacing-unit / 2;
   background-color: $background-color;
   border: 1px solid $brand-color-light;
@@ -114,6 +125,47 @@
       margin-left: auto;
     }
   }
+}
+
+
+
+.b8t_brand {
+    white-space: nowrap;
+}
+
+.b8t_brand a {
+    font-variant: small-caps;
+}
+
+.b8t_brand span {
+    color: red !important;
+    font-size: 0.75em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.b8t_brand sup {
+    font-size: 0.5em;
+}
+
+.b8t_nav {
+    line-height: 4em;
+}
+
+.b8t_menu-icon {
+    font-size: 72px;
+    margin: 2px;
+}
+
+.b8t_menu-icon::after {
+    content: '\0000ab';
+}
+
+.slogan {
+    font-style: italic;
+    font-size: 0.6em;
+    line-height: 0.6em;
+    padding: 0 0 0.1em 0;
 }
 
 
@@ -340,3 +392,5 @@
     width: calc(50% - (#{$spacing-unit} / 2));
   }
 }
+
+
