@@ -1,6 +1,4 @@
 ---
-layout: tag
-title: Capacitors
-category: capacitor
+tagname: capacitor
 ---
-
+capacitor

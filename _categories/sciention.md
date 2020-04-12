@@ -1,6 +1,6 @@
 ---
-layout: category
-title: Scientions Basics
-category: sciention
+nickname: sciention
+modulname: Scientions Basics
 ---
+Scientions Basics
 

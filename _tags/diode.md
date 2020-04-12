@@ -1,6 +1,5 @@
 ---
-layout: tag
-title: Diodes
-category: diode
+tagname: diode
 ---
+diode
 

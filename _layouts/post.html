@@ -12,3 +12,9 @@ layout: default
     </p>
 
     {{ content }}
+
+    <small>
+        {% for tag in page.tags %}
+        <a href="/tags/{{ tag }}.html">{{ tag }}</a>
+        {% endfor %}
+    </small>

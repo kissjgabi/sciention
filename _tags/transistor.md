@@ -1,6 +1,5 @@
 ---
-layout: tag
-title: Transistors
-category: transistor
+tagname: transistor
 ---
+transistor
 

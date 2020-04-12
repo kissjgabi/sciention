@@ -9,10 +9,9 @@ title: Categories
     <li>
       <h2>
         <a href="{{ category.url | relative_url}}">
-            {{ category.title }}
+            {{ category.modulname }}
         </a>
       </h2>
-      <h3>{{ category.position }}</h3>
       <p>{{ category.content | markdownify }}</p>
     </li>
   {% endfor %}

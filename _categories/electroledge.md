@@ -1,6 +1,5 @@
 ---
-layout: category
-title: Electronics Basics
-category: electra
+nickname: electra
+modulname: Electronics Basics
 ---
-
+Electronics Basics

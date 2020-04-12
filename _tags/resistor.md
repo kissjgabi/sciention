@@ -1,6 +1,5 @@
 ---
-layout: tag
-title: Resistors
-category: resistor
+tagname: resistor
 ---
+resistor
 

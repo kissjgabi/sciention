@@ -9,10 +9,9 @@ title: Tags
     <li>
       <h2>
         <a href="{{ tag.url | relative_url}}">
-            {{ tag.title }}
+            {{ tag.tagname }}
         </a>
       </h2>
-      <h3>{{ tag.position }}</h3>
       <p>{{ tag.content | markdownify }}</p>
     </li>
   {% endfor %}

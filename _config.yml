@@ -73,10 +73,10 @@ collections:
   categories:
     output: true
 
-  electroledges:
+  tags:
     output: true
 
-  tags:
+  electroledges:
     output: true
 
 defaults:
@@ -85,6 +85,21 @@ defaults:
       type: "authors"
     values:
       layout: "author"
+  - scope:
+      path: ""
+      type: "categories"
+    values:
+      layout: "category"
+  - scope:
+      path: ""
+      type: "tags"
+    values:
+      layout: "tag"
+  - scope:
+      path: ""
+      type: "electroledges"
+    values:
+      layout: "electroledge"
   - scope:
       path: ""
       type: "posts"

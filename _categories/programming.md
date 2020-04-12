@@ -1,6 +1,6 @@
 ---
-layout: category
-title: Programming Basics
-category: programming
+nickname: programming
+modulname: Programming Basics
 ---
+Programming Basics
 

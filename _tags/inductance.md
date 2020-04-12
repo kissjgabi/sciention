@@ -1,6 +1,5 @@
 ---
-layout: tag
-title: Inductances
-category: inductance
+tagname: inductance
 ---
+inductance
 
