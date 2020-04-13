@@ -2,7 +2,13 @@
 layout: post
 author: emi
 category: lifestyle
+title: "Lifestyle"
 tag: harmony
+sitemap:
+    lastmod: 2020-04-12
+    priority: 0.25
+    changefreq: 'none'
+    exclude: 'no'
 ---
 **Work/Life balance:** No matter what work you do, create boundaries. When it’s work time, focus on your work. When it’s not work time, focus on your life. This is super simple, yet not everyone does it. You’ll find you are more productive in and out of work, have a better family life and feel happier.   
 

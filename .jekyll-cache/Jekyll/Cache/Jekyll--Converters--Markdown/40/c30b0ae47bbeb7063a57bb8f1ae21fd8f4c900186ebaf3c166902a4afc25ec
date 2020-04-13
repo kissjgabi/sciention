@@ -1,0 +1,43 @@
+I"D<blockquote>
+  <p>Az Avogadro féle szám (1 mol anyagban található molekulák száma):</p>
+</blockquote>
+
+<p>6,022x10<sup>23</sup> molekula/mol</p>
+
+<blockquote>
+  <p>A víz sűrűsége (4 °C-on = 277,15 °K):</p>
+</blockquote>
+
+<p>1,00 g/ml</p>
+
+<blockquote>
+  <p>A víz 1 mol mennyiségének tömege:</p>
+</blockquote>
+
+<p>H<sub>2</sub>O = 
+2×<b>m</b><sub>hidrogén</sub> + 1×<b>m</b><sub>oxigén</sub> = 
+2×1,008 g + 15,999 g = 18,15 gramm</p>
+
+<blockquote>
+  <p>Az 1 mm átmérőjű vízgömb:</p>
+</blockquote>
+
+<p>(1,333333˙)×π×(0,0005)<sup>3</sup> = 5,23*10<sup>-10</sup> m<sup>3</sup> = 5,23×10<sup>-4</sup> ml, 
+aminek a tömege: 5,23×10<sup>-4</sup> g és 
+ez 5,23×10<sup>-4</sup> / 18,15 = 2,88×10<sup>-5</sup> mol.</p>
+
+<blockquote>
+  <p>Molekulák az 1 mm átmérőjű gömbben</p>
+</blockquote>
+
+<p>2,88×10<sup>-5</sup> × 6.022x10<sup>23</sup> = <b><u>1.736x10<sup>19</sup>&nbsp;db</u></b></p>
+
+<hr />
+<blockquote>
+  <p><u>A Pí megjelenítése:</u><br />
+html: <code class="highlighter-rouge">&amp;pi;</code> = π <code class="highlighter-rouge">&amp;Pi;</code> = Π<br />
+css / javascript: ‘/u03c0’;<br />
+linux keyboard: <code class="highlighter-rouge">left-ctrl</code> + <code class="highlighter-rouge">shift</code> + <code class="highlighter-rouge">u</code> után “03c0”.</p>
+</blockquote>
+
+:ET

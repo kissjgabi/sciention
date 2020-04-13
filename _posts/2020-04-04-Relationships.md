@@ -2,7 +2,13 @@
 layout: post
 author: emi
 category: lifestyle
+title: "Relationships"
 tag: harmony
+sitemap:
+    lastmod: 2020-04-12
+    priority: 0.25
+    changefreq: 'none'
+    exclude: 'no'
 ---
 **Listening:** Take what people say at face value. There is no need to waste your energy wondering what their ulterior motive is, or if they are not telling the truth about things. Keep it simple and accept their truth.  
 

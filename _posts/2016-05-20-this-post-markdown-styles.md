@@ -5,6 +5,11 @@ category: programming
 title: "This post demonstrates markdown content styles"
 meta: "markdown styles"
 tag: jekyll
+sitemap:
+    lastmod: 2020-04-12
+    priority: 0.75
+    changefreq: 'none'
+    exclude: 'no'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.

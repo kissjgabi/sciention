@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="/sciention/assets/css/style.css">
+<link rel="icon" type="image/x-icon" href=/sciention/favicon.ico />
+<link rel="shortcut icon" type="image/x-icon" href=/sciention/favicon.ico />
+
+
+
+
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><div class="site-title b8t_brand">
+        <a href="/sciention/" title="">
+            <span><sub>Hi there!</sub></span> Sciention<sup>®</sup>
+        </a>
+    </div><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon b8t_menu-icon">
+            
+          </span>
+        </label>
+
+        <div class="trigger b8t_nav">
+        <span>&nbsp;</span>
+                   
+            <a  href="/sciention/" 
+                 >
+                     Home 
+            </a>
+        <span>&nbsp;</span>
+                   
+            <a  href="/sciention/about.html" 
+                 >
+                     About 
+            </a>
+        <span>&nbsp;</span>
+                   
+            <a  href="/sciention/blog/index.html" 
+                 >
+                     Blog 
+            </a>
+        <span>&nbsp;</span>
+                   
+            <a  href="/sciention/staff.html" 
+                 >
+                     Staff 
+            </a>
+        <span>&nbsp;</span>
+        
+        </div>
+      </nav></div>
+</header><div class="b8t-breadcrumb">
+
+    <div class="slogan">The magazine of the B6sicS SCHooL</div>
+
+</div>
+    
+
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+           <h1>Jekyll's blogging</h1>
+
+    <p>
+      12 Apr 2020
+      
+      
+        - <a href="/sciention/authors/kovax.html">Kovacs J Giulia</a>
+      
+    </p>
+
+        <p>
+In true <a href="https://jekyllrb.com/docs/step-by-step/08-blogging/">Jekyll style, blogging</a> is powered by text files only.<br />
+Blog posts live in a folder called <span>&nbsp;<code>_posts</code>&nbsp;</span>. The filename for posts have a special format: the publish date, then a title, followed by an extension.
+Sample post (<span>&nbsp;<code>_posts/2020-04-04-bananas.md</code>&nbsp;</span>):
+    </p>
+    <pre><code>
+    ---
+    layout: post
+    author: emi
+    ---
+    A banana is an edible fruit.  
+
+    In some countries, bananas used for cooking may be called "plantains",
+    distinguishing them from dessert bananas.
+    </code></pre>
+
+    <p>
+The post layout you’ll need to create it at <span>&nbsp;<code>_layouts/post.html</code>&nbsp;</span> with the following content:
+    </p>
+    <pre><code>
+    ---
+    layout: default
+    ---
+    &lt;h1>{<c>{ page.title }</c>}&lt;/h1>
+    &lt;p>{<c>{ page.date | date_to_string }</c>} - {<c>{ page.author }</c>}&lt;/p>
+    {<c>{ content }</c>}
+    </code></pre>
+    <p>
+Jekyll makes posts available at <span>&nbsp;<code>site.posts</code>&nbsp;</span>.<br />
+Create <span>&nbsp;<code>blog.html</code>&nbsp;</span> in the root with the following content:
+    </p>
+    <pre><code>
+    ---
+    layout: default
+    title: Blog
+    ---
+    &lt;h1>Latest Posts&lt;/h1>
+
+    &lt;ul>
+      {<c>% for post in site.posts %</c>}
+        &lt;li>
+            &lt;h2>
+                &lt;a href="{<c>{ post.url | relative_url }</c>}">
+                    {<c>{ post.title }</c>}
+                &lt;/a>
+            &lt;/h2>
+          {<c>{ post.excerpt }</c>}
+        &lt;/li>
+      {<c>% endfor %</c>}
+    &lt;/ul>
+    </code></pre>
+    <p>
+Open <span>&nbsp;<code>_data/navigation.yml</code>&nbsp;</span> and add an entry for the blog page:
+    </p>
+    <pre><code>
+    - name: Home
+      link: /
+    - name: About
+      link: /about.html
+    <mark>- name: Blog      </mark>
+    <mark>  link: /blog.html</mark>
+    </code></pre>
+
+
+
+
+    <small>
+        
+        <a href="/tags/jekyll.html">jekyll</a>
+        
+    </small>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/sciention/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      </div>
+      <div class="footer-col">
+        <p>entertaining scientific publications online &lt;br /&gt;The founders are the Feynman Company and the Einstein Circle</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

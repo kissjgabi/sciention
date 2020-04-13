@@ -2,7 +2,13 @@
 layout: post
 author: emi
 category: lifestyle
+title: "Productivity"
 tag: harmony
+sitemap:
+    lastmod: 2020-04-12
+    priority: 0.25
+    changefreq: 'none'
+    exclude: 'no'
 ---
 **Procrastination:** If you are avoiding a particular task, you are just wasting your time, and possibly other people’s time too. Set a timer for 25 minutes and use that time to get the task done. If you haven’t finished within that time period, take a 5 minute break, and set the timer again and resume working toward completing the task. This is called the Pomodoro Technique. It really works.  
 

@@ -16,8 +16,8 @@
 <body><header class="site-header">
 
   <div class="wrapper"><div class="site-title b8t_brand">
-        <a href="/sciention/">
-            <span><sub>new</sub></span> Sciention<sup>®</sup>
+        <a href="/sciention/" title="">
+            <span><sub>Hi there!</sub></span> Sciention<sup>®</sup>
         </a>
     </div><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -68,6 +68,141 @@
             <h1>Latest Posts</h1>
 
 <ul>
+  
+    <li>
+      <h2><a href="/sciention/facts/2020/04/13/vizmolekulak-gombben.html">Hány vízmolekula van az 1 mm átmérőjű gömbben?</a></h2>
+      <blockquote>
+  <p>Az Avogadro féle szám (1 mol anyagban található molekulák száma):</p>
+</blockquote>
+
+    </li>
+  
+    <li>
+      <h2><a href="/sciention/programming/2020/04/12/stepByStep08.html">use collections in Jekyll</a></h2>
+          <p>
+Add to <span>&nbsp;<code>_config.yml</code>&nbsp;</span> in the root the following lines:
+    </p>
+    <pre><code>
+    collections:    # author collections, each author has their own page
+      authors:
+        output: true
+    </li>
+  
+    <li>
+      <h2><a href="/sciention/programming/2020/04/12/stepByStep07.html">Jekyll's blogging</a></h2>
+          <p>
+In true <a href="https://jekyllrb.com/docs/step-by-step/08-blogging/">Jekyll style, blogging</a> is powered by text files only.<br />
+Blog posts live in a folder called <span>&nbsp;<code>_posts</code>&nbsp;</span>. The filename for posts have a special format: the publish date, then a title, followed by an extension.
+Sample post (<span>&nbsp;<code>_posts/2020-04-04-bananas.md</code>&nbsp;</span>):
+    </p>
+    <pre><code>
+    ---
+    layout: post
+    author: emi
+    ---
+    A banana is an edible fruit.  
+    </li>
+  
+    <li>
+      <h2><a href="/sciention/programming/2020/04/12/stepByStep06.html">use assets in Jekyll</a></h2>
+      Inlining the styles used in <span>&nbsp;<code>_includes/mynavigation.html</code>&nbsp;</span> is not a best practice, let’s style the current page with a class instead.<br />
+    </p>
+    <pre><code>
+&lt;nav> ¤
+  {<c>% for item in site.data.mynavigation </c>%}
+    &lt;a href="{<c>{s item.link | relative_url }</c>}" 
+        {<c>% if page.url == item.link </c>%}<mark>class="current"</mark>{<c>% endif </c>%}>
+      {<c>{ item.name }</c>}
+    &lt;/a> ¤
+  {<c>% endfor </c>%}
+&lt;/nav>
+    </code></pre>
+    </li>
+  
+    <li>
+      <h2><a href="/sciention/programming/2020/04/12/stepByStep05.html">includes in Jekyll's layouts</a></h2>
+      	<p>
+The <span>&nbsp;<code>include</code>&nbsp;</span> tag allows you to include content from another file stored in an <span>&nbsp;<code>_includes</code>&nbsp;</span> folder. Includes are useful for having a single source for source code that repeats around the site or for improving the readability.<br />
+Navigation source code can get complex so sometimes it’s nice to move it into an include.
+    </p>
+    <p>
+Jekyll supports loading data from YAML, JSON, and CSV files located in a <span>&nbsp;<code>_data</code>&nbsp;</span> directory. Data files are a great way to separate content from source code to make the site easier to maintain.<br />
+Create a data file for the navigation at <span>&nbsp;<code>_data/mynavigation.yml</code>&nbsp;</span> with the following:
+    </p>
+    <pre><code>
+        - name: Home
+          link: /
+        - name: About
+          link: /about.html
+    </code></pre>
+    </li>
+  
+    <li>
+      <h2><a href="/sciention/programming/2020/04/12/stepByStep04.html">page layouts Jekyll's blog</a></h2>
+      	<p>
+Layouts are templates that wrap around your content. They live in a directory called <span>&nbsp;<code>_layouts</code>&nbsp;</span> in the root.
+These layouts would be override the Minima-theme layouts.<br />
+Create your first layout at <span>&nbsp;<code> _layouts/default.html</code>&nbsp;</span> with the following content:
+    </p>
+    <pre><code>
+        <mark>---</mark>
+        <mark>layout: default</mark>        # we get Minima's default
+        <mark>---</mark>
+        <del>&lt;!doctype html></del>
+        <del>&lt;html></del>
+          <del>&lt;head></del>
+            <del>&lt;meta charset="utf-8"></del>
+            <del>&lt;title>{<c>{ page.title }</c>}&lt;/title></del>
+          <del>&lt;/head></del>
+          <del>&lt;body></del>
+            <mark>{<c>{ content }</c>}</mark>
+          <del>&lt;/body></del>
+        <del>&lt;/html></del>
+    </li>
+  
+    <li>
+      <h2><a href="/sciention/programming/2020/04/12/stepByStep03.html">use liquid in Jekyll</a></h2>
+      	<p>
+Please refere 
+<a href="https://jekyllrb.com/docs/step-by-step/02-liquid/"> Liquid </a> and 
+<a href="https://jekyllrb.com/docs/step-by-step/03-front-matter/"> Front matter </a>
+(jekyllrb.com).  
+    </p>
+    <p>
+Insert in the <span>&nbsp;<code>index.html</code>&nbsp;</span> the yellow lines: 
+    </p>
+    </li>
+  
+    <li>
+      <h2><a href="/sciention/programming/2020/04/12/stepByStep02.html">create blog with Jekyll</a></h2>
+      	<p>
+Create a new repository <span>&nbsp;<code>https://github.com/kissjgabi/kiss.git</code>&nbsp;</span> on the github.  
+    </p>
+    <p>
+Create a root directory for the project on your local computer and use it:  
+    </p>
+    </li>
+  
+    <li>
+      <h2><a href="/sciention/programming/2020/04/12/stepByStep01.html">start with Jekyll</a></h2>
+      	<p> 
+    First follow the <a href="https://jekyllrb.com/docs/">Quickstart</a>'s instructions to install a full Ruby development environment, Jekyll and bundler gems. Then for the first time the 
+    <a href="https://jekyllrb.com/docs/step-by-step/01-setup/">
+        Step by Step Tutorial
+    </a>
+is very useful.
+    </p>
+<hr /><br />
+    <p>
+The essence of the tutorial is described here 
+    <a href="stepByStep02.html">in the following</a>.
+	</p>
+    </li>
+  
+    <li>
+      <h2><a href="/sciention/programming/2020/04/12/stepByStep00.html">s.b.s. some styles</a></h2>
+          <a href="#">Step by step</a>
+    </li>
   
     <li>
       <h2><a href="/sciention/lifestyle/2020/04/04/Work.html">Work</a></h2>

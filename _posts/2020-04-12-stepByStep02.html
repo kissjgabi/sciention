@@ -1,0 +1,101 @@
+---
+layout: post
+author: kovax
+title: "create blog with Jekyll"
+meta: "step by step"
+category: programming
+tag: jekyll
+sitemap:
+    lastnod: 2020-04-12
+    priority: 0.75
+    changefreq: 'none'
+    exclude: 'no'
+---
+
+	<p>
+Create a new repository <span>&nbsp;<code>https://github.com/kissjgabi/kiss.git</code>&nbsp;</span> on the github.  
+    </p>
+    <p>
+Create a root directory for the project on your local computer and use it:  
+    </p>
+
+    <pre><code>
+~$ cd git/kissjgabiGIT/kiss
+    </code></pre>
+
+    <p>
+Init git with the remote repository
+    </p>
+
+    <pre><code>
+~/git/kissjgabiGIT/kiss$ git init
+~/git/kissjgabiGIT/kiss$ git remote add origin https://github.com/kissjgabi/kiss.git
+~/git/kissjgabiGIT/kiss$ git pull origin master
+    </code></pre>
+
+    <p>
+Create a „_config.yml” in the root with the following minimum content:  
+    </p>
+
+    <pre><code>
+title: K.I.S.S.
+email: b6@b6sics.hu
+
+#  >-  means to ignore newlines until next variable (-> baseurl)
+description: >- 
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+baseurl: "/kiss"
+url: "https://kissjgabi.github.io"
+
+twitter_username: "kissjgabi"
+github_username:  "kissjgabi"
+
+# Build settings
+theme: minima
+
+plugins:
+  - jekyll-sitemap
+    </code></pre>
+
+    <p>
+Create an „index.html” in the root:  
+    </p>
+
+    <pre><code>
+&lt;!doctype html>
+&lt;html>
+  &lt;head>
+    &lt;meta charset="utf-8">
+    &lt;title>Home&lt;/title>
+  &lt;/head>
+  &lt;body>
+    &lt;h1>K.I.S.S.&lt;/h1>
+	&lt;p>
+	  Keep it simple stupid.
+	&lt;/p>
+  &lt;/body>
+&lt;/html>
+    </code></pre>
+
+    <p>
+Build your site:
+    </p>
+    <p>
+
+    <pre><code>
+~/git/kissjgabiGIT/kiss$ jekyll build
+    </code></pre>
+
+    <p>
+Start the server:
+    </p>
+    <pre><code>
+~/git/kissjgabiGIT/kiss$ jekyll serve
+    </code></pre>
+    <p>
+Go to <span>&nbsp;<code>http://localhost:4000/kiss</code>&nbsp;</span> in your browser.
+    </p>
+

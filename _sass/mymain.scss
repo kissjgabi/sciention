@@ -41,3 +41,26 @@ del {
     text-align: center;
  }
 
+.b8t_label, .b8t_cell {
+    margin: 0 0.25em;
+    padding: 0.25em 0.5em;
+    border: 1px solid #eee;
+}
+
+.b8t_label:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.b8t_listline {
+    background-color: white;
+    margin-bottom: 0.5em;
+    padding: 0.25em;
+    border-bottom: 1px dotted #eee;
+}
+
+.b8t_list {
+    list-style-type: none;
+    background-color: #fafafa;
+    padding: 0.5em;
+}

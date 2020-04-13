@@ -1,0 +1,85 @@
+---
+layout: post
+author: kovax
+title: "page layouts Jekyll's blog"
+meta: "step by step"
+category: programming
+tag: jekyll
+sitemap:
+    lastnod: 2020-04-12
+    priority: 0.75
+    changefreq: 'none'
+    exclude: 'no'
+---
+
+	<p>
+Layouts are templates that wrap around your content. They live in a directory called <span>&nbsp;<code>_layouts</code>&nbsp;</span> in the root.
+These layouts would be override the Minima-theme layouts.<br />
+Create your first layout at <span>&nbsp;<code> _layouts/default.html</code>&nbsp;</span> with the following content:
+    </p>
+    <pre><code>
+        <mark>---</mark>
+        <mark>layout: default</mark>        # we get Minima's default
+        <mark>---</mark>
+        <del>&lt;!doctype html></del>
+        <del>&lt;html></del>
+          <del>&lt;head></del>
+            <del>&lt;meta charset="utf-8"></del>
+            <del>&lt;title>{<c>{ page.title }</c>}&lt;/title></del>
+          <del>&lt;/head></del>
+          <del>&lt;body></del>
+            <mark>{<c>{ content }</c>}</mark>
+          <del>&lt;/body></del>
+        <del>&lt;/html></del>
+
+        <del>Reused from Minima's „default” layout</del>
+        K.i.s.s. & write:
+        <mark>---</mark>
+        <mark>layout: default</mark>        # Minima
+        <mark>---</mark>
+        <mark>{<c>{ content }</c>}</mark>
+    </code></pre>
+
+    <p>
+To have <span>&nbsp;<code>index.html</code>&nbsp;</span> use this layout, you can set a <span>&nbsp;<code>layout</code>&nbsp;</span> variable in front matter. The layout wraps around the content of the page so all you need in <span>&nbsp;<code>index.html</code>&nbsp;</span> is:
+    </p>
+    <pre><code>
+        ---
+        layout: mydefault
+        title: Home
+        ---
+        &lt;h1><mark>{<c>{ "k.i.s.s." | capitalize }</c>}</mark>&lt;/h1>
+	    &lt;p>
+	      Keep it simple stupid.
+	    &lt;/p>
+    </code></pre>
+
+    <p>
+We have a reusable code yet. We are able to create a new <span>&nbsp;<code>about</code>&nbsp;</span> file in the root directory with a few lines. The <span>&nbsp;<code>about.md</code>&nbsp;</span>'s code is:
+    </p>
+    <pre><code>
+        ---
+        layout: mydefault
+        title: About
+        ---
+        # About page  
+
+        This page tells you a little bit about me. They have a short text.
+    </code></pre>
+
+    <p>
+Amend you should upload to the github.
+    </p>
+    <pre><code>
+        ~/git/kissjgabiGIT/kiss$ git add .
+        ~/git/kissjgabiGIT/kiss$ git commit -m "start github.com/kissjgabi/kiss intro"
+        ~/git/kissjgabiGIT/kiss$ git push
+    </code></pre>
+
+    <p>
+Publish the repository on the <a href="https://pages.github.com/">GitHub Pages</a> for free.<br />
+At least the website has been displayed at <a href="https://kissjgabi.github.io/kiss/">kissjgabi.github.io/kiss</a>.
+    </p>
+
+
+

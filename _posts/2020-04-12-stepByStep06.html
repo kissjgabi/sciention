@@ -1,0 +1,52 @@
+---
+layout: post
+author: kovax
+title: "use assets in Jekyll"
+meta: "step by step"
+category: programming
+tag: jekyll
+sitemap:
+    lastnod: 2020-04-12
+    priority: 0.75
+    changefreq: 'none'
+    exclude: 'no'
+---
+
+Inlining the styles used in <span>&nbsp;<code>_includes/mynavigation.html</code>&nbsp;</span> is not a best practice, let’s style the current page with a class instead.<br />
+    </p>
+    <pre><code>
+&lt;nav> ¤
+  {<c>% for item in site.data.mynavigation </c>%}
+    &lt;a href="{<c>{s item.link | relative_url }</c>}" 
+        {<c>% if page.url == item.link </c>%}<mark>class="current"</mark>{<c>% endif </c>%}>
+      {<c>{ item.name }</c>}
+    &lt;/a> ¤
+  {<c>% endfor </c>%}
+&lt;/nav>
+    </code></pre>
+
+    <p>
+First create a Sass file at <span>&nbsp;<code>assets/main.scss</code>&nbsp;</span> with the following content:
+    </p>
+    <pre><code>
+        ---
+        ---
+        @import "mymain";
+    </code></pre>
+    <p>
+It overrides Minima's main.scss. The <span>&nbsp;<code>@import "mymain"</code>&nbsp;</span> tells Sass to look for a file called <span>&nbsp;<code>mymain.scss</code>&nbsp;</span> in the sass directory (<span>&nbsp;<code>_sass/</code>&nbsp;</span>).<br />
+Create a Sass file at <span>&nbsp;<code>_sass/main.scss</code>&nbsp;</span> with the following content:
+    </p>
+    <pre><code>
+        @import "minima";
+
+        .current {
+            color: red !important;
+            background-color: lightgray;
+        }
+    </code></pre>
+    <p>
+Minima's style sheet is still overridden, and the result is displayed in browser.
+    </p>
+
+

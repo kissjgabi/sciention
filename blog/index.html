@@ -3,12 +3,16 @@ layout: mydefault
 title: Blog
 ---
 <!-- post list -->
+<ul class="b8t_list">
 {% for post in paginator.posts %}
-    <li>
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
+    <li class="b8t_listline">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      {% if post.meta %}<span class="b8t_cell"> {{ post.meta }} </span>{% endif %}
+      {% if post.category %}<span class="b8t_cell"> {{ post.category }} </span>{% endif %}
+      {% if post.tag %}<span class="b8t_cell"> {{ post.tag }} </span>{% endif %}
     </li>
 {% endfor %}
+</ul>
 
 
 <!-- pagination -->

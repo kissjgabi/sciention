@@ -1,0 +1,48 @@
+---
+layout: post
+author: kovax
+title: "use liquid in Jekyll"
+meta: "step by step"
+category: programming
+tag: jekyll
+sitemap:
+    lastnod: 2020-04-12
+    priority: 0.75
+    changefreq: 'none'
+    exclude: 'no'
+---
+
+	<p>
+Please refere 
+<a href="https://jekyllrb.com/docs/step-by-step/02-liquid/"> Liquid </a> and 
+<a href="https://jekyllrb.com/docs/step-by-step/03-front-matter/"> Front matter </a>
+(jekyllrb.com).  
+    </p>
+    <p>
+Insert in the <span>&nbsp;<code>index.html</code>&nbsp;</span> the yellow lines: 
+    </p>
+
+    <pre><code>
+<mark>--- 
+ title: Home 
+ ---</mark>
+&lt;!doctype html>
+&lt;html>
+  &lt;head>
+    &lt;meta charset="utf-8">
+    &lt;title><mark>{<c>{ page.title }</c>}</mark>&lt;/title>
+  &lt;/head>
+  &lt;body>
+    &lt;h1><mark>{<c>{ "k.i.s.s." | capitalize }</c>}</mark>&lt;/h1>
+	&lt;p>
+	  Keep it simple stupid.
+	&lt;/p>
+  &lt;/body>
+&lt;/html>
+    </code></pre>
+
+	<p>
+It gives the following result:
+    </p>
+<div style="text-align:center"><img src="assets/images/index.jpg" /></div>
+

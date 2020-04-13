@@ -16,8 +16,8 @@
 <body><header class="site-header">
 
   <div class="wrapper"><div class="site-title b8t_brand">
-        <a href="/sciention/">
-            <span><sub>new</sub></span> Sciention<sup>®</sup>
+        <a href="/sciention/" title="">
+            <span><sub>Hi there!</sub></span> Sciention<sup>®</sup>
         </a>
     </div><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -65,18 +65,57 @@
 
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-            <h1>Electronics Basics</h1>
+           <h1>use liquid in Jekyll</h1>
 
-    <p>Electronics Basics</p>
-
-
-    <h2>Posts</h2>
-    
-    <ul>
+    <p>
+      12 Apr 2020
       
       
-    </ul>      
+        - <a href="/sciention/authors/kovax.html">Kovacs J Giulia</a>
+      
+    </p>
 
+    	<p>
+Please refere 
+<a href="https://jekyllrb.com/docs/step-by-step/02-liquid/"> Liquid </a> and 
+<a href="https://jekyllrb.com/docs/step-by-step/03-front-matter/"> Front matter </a>
+(jekyllrb.com).  
+    </p>
+    <p>
+Insert in the <span>&nbsp;<code>index.html</code>&nbsp;</span> the yellow lines: 
+    </p>
+
+    <pre><code>
+<mark>--- 
+ title: Home 
+ ---</mark>
+&lt;!doctype html>
+&lt;html>
+  &lt;head>
+    &lt;meta charset="utf-8">
+    &lt;title><mark>{<c>{ page.title }</c>}</mark>&lt;/title>
+  &lt;/head>
+  &lt;body>
+    &lt;h1><mark>{<c>{ "k.i.s.s." | capitalize }</c>}</mark>&lt;/h1>
+	&lt;p>
+	  Keep it simple stupid.
+	&lt;/p>
+  &lt;/body>
+&lt;/html>
+    </code></pre>
+
+	<p>
+It gives the following result:
+    </p>
+<div style="text-align:center"><img src="assets/images/index.jpg" /></div>
+
+
+
+    <small>
+        
+        <a href="/tags/jekyll.html">jekyll</a>
+        
+    </small>
 
       </div>
     </main><footer class="site-footer h-card">

@@ -3,7 +3,7 @@ layout: post
 author: ghost
 category: programming
 title: "Welcom to Jekyll"
-meta: "markdown styles"
+meta: "jekyll pages"
 tag: web
 sitemap:
     lastmod: 2020-04-12

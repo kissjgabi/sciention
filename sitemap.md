@@ -58,14 +58,21 @@ sitemap:
     </url>
     {% endunless %}
   {% endfor %}
-</urlset>
-<pre><code>---
-Front matter variables for blog entry
-sitemap:
-  lastmod: 2014-01-23
-  priority: 0.7
-  changefreq: 'monthly'
-  exclude: 'yes'
+</urlset>  
+
 ---
-</code></pre>
+
+    Front matter variables for blog entry
+    
+    layout: post
+    author: guest
+    category: programming
+    title: "This post demonstrates markdown content styles"
+    meta: "markdown styles"
+    tag: jekyll
+    sitemap:
+        lastmod: 2020-04-12
+        priority: 0.75
+        changefreq: 'none'
+        exclude: 'no'
 

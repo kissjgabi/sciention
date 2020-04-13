@@ -1,0 +1,78 @@
+---
+layout: post
+author: kovax
+title: "Jekyll's blogging"
+meta: "step by step"
+category: programming
+tag: jekyll
+sitemap:
+    lastnod: 2020-04-12
+    priority: 0.75
+    changefreq: 'none'
+    exclude: 'no'
+---
+
+    <p>
+In true <a href="https://jekyllrb.com/docs/step-by-step/08-blogging/">Jekyll style, blogging</a> is powered by text files only.<br />
+Blog posts live in a folder called <span>&nbsp;<code>_posts</code>&nbsp;</span>. The filename for posts have a special format: the publish date, then a title, followed by an extension.
+Sample post (<span>&nbsp;<code>_posts/2020-04-04-bananas.md</code>&nbsp;</span>):
+    </p>
+    <pre><code>
+    ---
+    layout: post
+    author: emi
+    ---
+    A banana is an edible fruit.  
+
+    In some countries, bananas used for cooking may be called "plantains",
+    distinguishing them from dessert bananas.
+    </code></pre>
+
+    <p>
+The post layout you’ll need to create it at <span>&nbsp;<code>_layouts/post.html</code>&nbsp;</span> with the following content:
+    </p>
+    <pre><code>
+    ---
+    layout: default
+    ---
+    &lt;h1>{<c>{ page.title }</c>}&lt;/h1>
+    &lt;p>{<c>{ page.date | date_to_string }</c>} - {<c>{ page.author }</c>}&lt;/p>
+    {<c>{ content }</c>}
+    </code></pre>
+    <p>
+Jekyll makes posts available at <span>&nbsp;<code>site.posts</code>&nbsp;</span>.<br />
+Create <span>&nbsp;<code>blog.html</code>&nbsp;</span> in the root with the following content:
+    </p>
+    <pre><code>
+    ---
+    layout: default
+    title: Blog
+    ---
+    &lt;h1>Latest Posts&lt;/h1>
+
+    &lt;ul>
+      {<c>% for post in site.posts %</c>}
+        &lt;li>
+            &lt;h2>
+                &lt;a href="{<c>{ post.url | relative_url }</c>}">
+                    {<c>{ post.title }</c>}
+                &lt;/a>
+            &lt;/h2>
+          {<c>{ post.excerpt }</c>}
+        &lt;/li>
+      {<c>% endfor %</c>}
+    &lt;/ul>
+    </code></pre>
+    <p>
+Open <span>&nbsp;<code>_data/navigation.yml</code>&nbsp;</span> and add an entry for the blog page:
+    </p>
+    <pre><code>
+    - name: Home
+      link: /
+    - name: About
+      link: /about.html
+    <mark>- name: Blog      </mark>
+    <mark>  link: /blog.html</mark>
+    </code></pre>
+
+

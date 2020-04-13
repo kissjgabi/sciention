@@ -1,0 +1,149 @@
+---
+layout: post
+author: kovax
+title: "use collections in Jekyll"
+meta: "step by step"
+category: programming
+tag: jekyll
+sitemap:
+    lastnod: 2020-04-12
+    priority: 0.75
+    changefreq: 'none'
+    exclude: 'no'
+---
+
+    <p>
+Add to <span>&nbsp;<code>_config.yml</code>&nbsp;</span> in the root the following lines:
+    </p>
+    <pre><code>
+    collections:    # author collections, each author has their own page
+      authors:
+        output: true
+
+    defaults:       # front matter defaults
+      - scope:
+          path: ""
+          type: "authors"
+        values:
+          layout: "author"
+      - scope:
+          path: ""
+          type: "posts"
+        values:
+          layout: "post"
+      - scope:
+          path: ""
+        values:
+          layout: "default"
+    </code></pre>
+
+    <p>
+To (re)load the configuration, restart the jekyll server. Press <span>&nbsp;<code>Ctrl+C</code>&nbsp;</span> in your terminal to stop the server, and then <span>&nbsp;<code>jekyll serve</code>&nbsp;</span> to restart it.
+    </p>
+    <p>
+Documents (the items in a collection) live in a folder in the root of the site named <span>&nbsp;<code>_*collection_name*</code>&nbsp;</span>. In this case, <span>&nbsp;<code>_authors</code>&nbsp;</span>.<br />
+Create a document for each author: <span>&nbsp;<code>_authors/emi.md</code>&nbsp;</span>:
+    </p>
+    <pre><code>
+    ---
+    short_name: emi
+    name: Kiss J Gabor 
+    position: Intendant CEO
+    ---
+    Owner of the „New Sciention” magazine. Founder of the „Einstein Circle” and the „Feynman Club”.
+    </code></pre>
+    <p>
+Let’s add a page which lists all the authors on the site. Jekyll makes the collection available at <span>&nbsp;<code>site.authors</code>&nbsp;</span>.<br />
+Create <span>&nbsp;<code>staff.html</code>&nbsp;</span> in the root with the following content:
+    </p>
+    <pre><code>
+    ---
+    layout: default
+    title: Staff
+    ---
+    &lt;h1>Staff&lt;/h1>
+
+    &lt;ul>
+      {<c>% for author in site.authors %</c>}
+        &lt;li>
+          &lt;h2>
+            &lt;a href="{<c>{ author.url | relative_url}</c>}">
+                {<c>{ author.name }</c>}
+            &lt;/a>
+          &lt;/h2>
+          &lt;h3>{<c>{ author.position }</c>}&lt;/h3>
+          &lt;p>{<c>{ author.content | markdownify }</c>}&lt;/p>
+        &lt;/li>
+      {<c>% endfor %</c>}
+</ul>
+    </code></pre>
+    <p>
+Open <span>&nbsp;<code>_data/navigation.yml</code>&nbsp;</span> and add an entry for the blog page:
+    </p>
+    <pre><code>
+    - name: Home
+      link: /
+    - name: About
+      link: /about.html
+    - name: Blog
+      link: /blog.html
+    <mark>- name: Staff      </mark>
+    <mark>  link: /staff.html</mark>
+    </code></pre>
+
+    <p>
+Create <span>&nbsp;<code>_layouts/author.html</code>&nbsp;</span>  with the following content:
+    </p>
+    <pre><code>
+    ---
+    layout: default
+    ---
+    &lt;h1>{<c>{ page.name }</c>}&lt;/h1>
+    &lt;h2>{<c>{ page.position }</c>}&lt;/h2>
+
+    {<c>{ content }</c>}
+
+    &lt;h2>Posts&lt;/h2>
+    &lt;ul>
+      {<c>% assign filtered_posts = site.posts | where: 'author', page.short_name %</c>}
+      {<c>% for post in filtered_posts %</c>}
+        &lt;li>
+            &lt;a href="{<c>{ post.url | relative_url }</c>}">
+                {<c>{ post.title }</c>}
+            &lt;/a>
+        &lt;/li>
+      {<c>% endfor %</c>}
+    &lt;/ul> 
+    </code></pre>
+
+    <p>
+The posts have a reference to the author so let’s link it to the author’s page. You can do this using a similar filtering technique in <span>&nbsp;<code>_layouts/post.html</code>&nbsp;</span>:
+    </p>
+    <pre><code>
+    ---
+    layout: default
+    ---
+    &lt;h1>{<c>{ page.title }</c>}&lt;/h1>
+
+    &lt;p>
+      {<c>{ page.date | date_to_string }</c>}
+      {<c>% assign author = site.authors | where: 'short_name', page.author | first %</c>}
+      {<c>% if author %</c>}
+            - &lt;a href="{<c>{ author.url | relative_url }</c>}">
+                {<c>{ author.name }</c>}
+            &lt;/a>
+      {<c>% endif %</c>}
+    &lt;/p> 
+
+    {<c>{ content }</c>}
+    </code></pre>
+
+    <p>
+<h3>The last capitel:</h3>
+    <p>
+Jump into the practice: <a href="https://jekyllrb.com/docs/step-by-step/10-deployment/">Deployment</a>.
+    </p>
+
+
+
+

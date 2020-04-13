@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="/sciention/assets/css/style.css">
+<link rel="icon" type="image/x-icon" href=/sciention/favicon.ico />
+<link rel="shortcut icon" type="image/x-icon" href=/sciention/favicon.ico />
+
+
+
+
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><div class="site-title b8t_brand">
+        <a href="/sciention/" title="">
+            <span><sub>Hi there!</sub></span> Sciention<sup>®</sup>
+        </a>
+    </div><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon b8t_menu-icon">
+            
+          </span>
+        </label>
+
+        <div class="trigger b8t_nav">
+        <span>&nbsp;</span>
+                   
+            <a  href="/sciention/" 
+                 >
+                     Home 
+            </a>
+        <span>&nbsp;</span>
+                   
+            <a  href="/sciention/about.html" 
+                 >
+                     About 
+            </a>
+        <span>&nbsp;</span>
+                   
+            <a  href="/sciention/blog/index.html" 
+                 >
+                     Blog 
+            </a>
+        <span>&nbsp;</span>
+                   
+            <a  href="/sciention/staff.html" 
+                 >
+                     Staff 
+            </a>
+        <span>&nbsp;</span>
+        
+        </div>
+      </nav></div>
+</header><div class="b8t-breadcrumb">
+
+    <div class="slogan">The magazine of the B6sicS SCHooL</div>
+
+</div>
+    
+
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+           <h1>page layouts Jekyll's blog</h1>
+
+    <p>
+      12 Apr 2020
+      
+      
+        - <a href="/sciention/authors/kovax.html">Kovacs J Giulia</a>
+      
+    </p>
+
+    	<p>
+Layouts are templates that wrap around your content. They live in a directory called <span>&nbsp;<code>_layouts</code>&nbsp;</span> in the root.
+These layouts would be override the Minima-theme layouts.<br />
+Create your first layout at <span>&nbsp;<code> _layouts/default.html</code>&nbsp;</span> with the following content:
+    </p>
+    <pre><code>
+        <mark>---</mark>
+        <mark>layout: default</mark>        # we get Minima's default
+        <mark>---</mark>
+        <del>&lt;!doctype html></del>
+        <del>&lt;html></del>
+          <del>&lt;head></del>
+            <del>&lt;meta charset="utf-8"></del>
+            <del>&lt;title>{<c>{ page.title }</c>}&lt;/title></del>
+          <del>&lt;/head></del>
+          <del>&lt;body></del>
+            <mark>{<c>{ content }</c>}</mark>
+          <del>&lt;/body></del>
+        <del>&lt;/html></del>
+
+        <del>Reused from Minima's „default” layout</del>
+        K.i.s.s. & write:
+        <mark>---</mark>
+        <mark>layout: default</mark>        # Minima
+        <mark>---</mark>
+        <mark>{<c>{ content }</c>}</mark>
+    </code></pre>
+
+    <p>
+To have <span>&nbsp;<code>index.html</code>&nbsp;</span> use this layout, you can set a <span>&nbsp;<code>layout</code>&nbsp;</span> variable in front matter. The layout wraps around the content of the page so all you need in <span>&nbsp;<code>index.html</code>&nbsp;</span> is:
+    </p>
+    <pre><code>
+        ---
+        layout: mydefault
+        title: Home
+        ---
+        &lt;h1><mark>{<c>{ "k.i.s.s." | capitalize }</c>}</mark>&lt;/h1>
+	    &lt;p>
+	      Keep it simple stupid.
+	    &lt;/p>
+    </code></pre>
+
+    <p>
+We have a reusable code yet. We are able to create a new <span>&nbsp;<code>about</code>&nbsp;</span> file in the root directory with a few lines. The <span>&nbsp;<code>about.md</code>&nbsp;</span>'s code is:
+    </p>
+    <pre><code>
+        ---
+        layout: mydefault
+        title: About
+        ---
+        # About page  
+
+        This page tells you a little bit about me. They have a short text.
+    </code></pre>
+
+    <p>
+Amend you should upload to the github.
+    </p>
+    <pre><code>
+        ~/git/kissjgabiGIT/kiss$ git add .
+        ~/git/kissjgabiGIT/kiss$ git commit -m "start github.com/kissjgabi/kiss intro"
+        ~/git/kissjgabiGIT/kiss$ git push
+    </code></pre>
+
+    <p>
+Publish the repository on the <a href="https://pages.github.com/">GitHub Pages</a> for free.<br />
+At least the website has been displayed at <a href="https://kissjgabi.github.io/kiss/">kissjgabi.github.io/kiss</a>.
+    </p>
+
+
+
+
+
+    <small>
+        
+        <a href="/tags/jekyll.html">jekyll</a>
+        
+    </small>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/sciention/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      </div>
+      <div class="footer-col">
+        <p>entertaining scientific publications online &lt;br /&gt;The founders are the Feynman Company and the Einstein Circle</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
